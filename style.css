@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream:  hsl(30, 38%, 92%);
+  --Very-dark-blue:  hsl(212, 21%, 14%);
+  --Dark-grayish-blue:  hsl(228, 12%, 48%);
+  --white:  hsl(0, 0%, 100%);
+  --paragraph: 14px;
+}
+body{
+    background: #F3EAE3 !important;
+    padding:0px; 
+    margin:0px;
+    font-size: var(--paragraph);
+}
+
+.container {
+    background:#F3EAE3;
+    height: 100vh;
+    display: flex;
+    height: 100vh;
+justify-content: center;
+align-items: center; 
+
+}
+.parent {
+    width: 500px;
+    height: 345px;
+    display: flex;
+
+}
+.left-child {
+    height: 100%;
+    width: 50%;
+}
+.left-child img {
+    height: 100%;
+    width: 100%;
+    border-radius: 7px 0 0% 7px;
+}
+.right-child {
+    height: 100%;
+    width: 50%;
+    border-radius: 0 7px 7px 0;
+    background: white;
+}
+.right-child .p-top {
+    margin: 19px 0 0 30px;
+    font-size: small;
+    letter-spacing: 3px;
+    color: var(--Dark-grayish-blue);
+}
+.right-child .title {
+    color: var(--Very-dark-blue);
+    font-size: x-large;
+    font-family: Fraunces;
+    margin: 9px 0 0 30px;
+    font-weight: 700;
+}
+.right-child .content {
+    font-size: small;
+    margin: 16px 0 10px 30px;
+    color: var(--Dark-grayish-blue);
+}
+.right-child .price {
+    /* margin: 0 0 0 14px; */
+    margin: 0 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+.right-child .price .cost-span {
+    font-family: Fraunces;
+    color: var(--Dark-cyan);
+    font-size: x-large;
+    font-weight: 700;
+}
+.right-child .price .offer-span {
+    text-decoration: line-through;
+    font-size: small;
+    margin-left: 15px;
+    color: var(--Dark-grayish-blue);
+} 
+.right-child .btn{
+    padding: 9px 45px;
+    font-size: small;
+    margin: 10px 0 0 0;
+    background: #3D8168;
+    color: white;
+}
+.right-child .btn:hover {
+    background: #3D8168 !important;
+    color: white !important;
+}
+
+.right-child .btn img {
+    width: 11px;
+    margin-right: 5px;
+}
+.right-child .footer {
+    display: flex;
+    justify-content: center;
+}
+/* .br-desktop {
+    display: block;
+}*/
+.br-mobile {
+    display: none;
+} 
+
+.img-desktop {
+    display: block;
+}
+.img-mobile {
+    display: none;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 550px) {
+    .parent {
+        display: grid !important;
+        grid-template-rows: repeat(1, 190px);
+        height: 100%;
+        width: 250px;
+    }
+
+    .container {
+        height: 93vh;
+        margin: 20px 0;
+    }
+    .left-child {
+        height: 190px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    .left-child img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .right-child {
+        height: 285px;
+        width: 250px;
+        border-radius: 0;
+    }
+    .right-child .p-top {
+        margin: 15px 0 10px 15px;
+        font-size: x-small;
+        letter-spacing: 3px;
+        color: var(--Dark-grayish-blue);
+    }
+    .right-child .title {
+        margin: 10px 0 10px 15px;
+        font-size: larger;
+    }
+    .right-child .content {
+        font-size: 12px;
+        margin:10px 0 10px 15px;
+    }
+    .right-child .price {
+        margin: 0;
+    }
+    .right-child .price .cost-span {
+        font-family: Fraunces;
+        color: var(--Dark-cyan);
+        font-size: x-large;
+        margin: 10px 10px 0 15px;
+        font-weight: 700;
+    }
+    .right-child .price .offer-span {
+        font-size: x-small;
+        margin: 0;
+    } 
+    .right-child .btn{
+        padding: 9px 55px;
+        font-size: small;
+        margin: 0;
+    }
+
+    .right-child .btn img {
+        width: 13px;
+        margin-right: 3px;
+    }
+     .br-desktop {
+        display: none;
+    }
+    .br-mobile {
+        display: inline-block;
+    } 
+    .img-mobile {
+        display: block;
+    }
+    .img-desktop {
+        display: none;
+    }
+
+}
